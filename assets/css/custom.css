@@ -1,0 +1,205 @@
+/* drag & drop input file */
+.file-icon p{
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+/*client list */
+.fa-trash{
+	color:#ff0000;
+}
+
+.header h2 {
+	width: auto;
+	display:inline;
+}
+
+.icons i{
+	font-size: 20px;
+}
+
+.filter{
+  margin-bottom: 8px;
+  margin-top: 3px;
+}
+
+/*view page */
+.view-details{
+	padding-top: calc(.375rem + 1px); 
+  padding-bottom: calc(.375rem + 1px);
+}
+
+/*override mooli theme css starts*/
+.sidebar .navbar-brand .logo {
+  width: 50px;
+}
+/*override mooli theme css ends*/
+.logo-lg {
+  width: 85%;
+}
+.logo-sm {
+  width: 50px;
+}
+
+.hidden {
+  display: none !important;
+}
+ 
+@media (max-width: 767px)  { /* smartphones, iPhone, portrait 480x320 phones */ 
+  .dataTables_length { text-align: left !important; } 
+  .dataTables_filter { text-align: left !important; } 
+
+  div.table-responsive>div.dataTables_wrapper>div.row>div[class^="col-"]:first-child {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  div.table-responsive>div.dataTables_wrapper>div.row>div[class^="col-"]:last-child {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+/**drawing page drag $ drop input*/
+.form__container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border: 2px dashed silver;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: silver;
+  margin-bottom: 5px;
+}
+.form__container.active {
+  background-color: rgba(192, 192, 192, 0.2);
+}
+.form__file {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  opacity: 0;
+}
+.form__files-container {
+  display: block;
+  width: 100%;
+  font-size: 0;
+  margin-top: 20px;
+}
+.form__image-container {
+  display: inline-block;
+  width: 49%;
+  height: 200px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.form__image-container:not(:nth-child(2n)) {
+  margin-right: 2%;
+}
+.form__image-container:after {
+  content: "✕";
+  position: absolute;
+  line-height: 200px;
+  font-size: 30px;
+  margin: auto;
+  top: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+.form__image-container:hover:after {
+  opacity: 1;
+  cursor: pointer;
+}
+.form__image {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+/* drawing page shOw image */
+.viewImage:hover .delete-drawing-img {
+  display: block;
+}
+
+.delete-drawing-img {
+  padding-top: 7px; 
+  padding-right: 7px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: none;
+}
+
+.viewImage:hover .download-drawing-img {
+  display: block;
+}
+
+.download-drawing-img{
+  padding-top: 7px; 
+  padding-right: 29px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: none;
+}
+
+.download-drawing-img  a {
+  color: #000000;
+}
+
+.lightGallery .light-link {
+  background: none;
+   
+}
+
+.test-result{
+  padding: 5px 8px;
+}
+
+.test-parameter h6 {
+  font-weight: 400;
+}
+
+ul.ui-autocomplete {
+  z-index: 1100;
+}
+
+.job-menu .dropdown-item.active, .job-menu .dropdown-item:active {
+  color: #fff !important;
+  background-color: #59c4bc;
+}
+
+.chatapp_body {
+  margin-left: 0px;
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+@media screen and (max-width: 1440px)  {
+  .chatapp_body .chat-history {
+    height: 200px;
+    /*overflow-y: auto;*/
+  }
+}
+.resize-none {
+  resize: none;
+}
+.chatapp_body .chat-history .message_data li.right .message {
+  margin-right: 10px !important;
+}
+.chatapp_body .chat-history .message_data li.left .message {
+  margin-left: 10px !important;
+}
